@@ -1,0 +1,328 @@
+.dashboard {
+  font-family: "Segoe UI", sans-serif;
+  padding: 20px;
+  background: white;
+  width: 60%;
+  color: #1f2c3f;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 45px;
+}
+
+.search-bar {
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  width: 90%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.notification-icon {
+  font-size: 20px;
+  margin-left: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.title {
+  font-size: 28px;
+  margin: 20px 0;
+}
+
+.dashboard-body {
+  display: flex;
+  gap: 18%;
+  flex-wrap: wrap;
+}
+
+.anatomy-section {
+  flex: 1;
+}
+
+.anatomy-container {
+  position: relative;
+  background: #f6faff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 3px;
+  text-align: center;
+}
+
+.anatomy-image {
+  max-height: 350px;
+  border-radius: 20px;
+}
+
+.tag {
+  position: absolute;
+  padding: 6px 14px;
+  border-radius: 15px;
+  font-size: 12px;
+  color: #1c1a51;
+  border: none;
+}
+
+.heart {
+  background-color: #402ee8;
+  top: 88px;
+  right: 0px;
+}
+
+.leg {
+  background-color: #00c6ff;
+  bottom: 40px;
+  left: 20px;
+}
+
+.health-stats {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.stat-card {
+  background: #f6faff;
+  padding: 19px;
+  width: 95%;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.stat-title {
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.stat-date {
+  font-size: 10px;
+  color: gray;
+  margin: 5px 0 10px;
+}
+
+.stat-card:nth-child(3) .progress.red::before {
+  width: 40%;
+}
+.progress {
+  position: relative;
+  height: 8px;
+  width: 100%;
+  background-color: #eee;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.progress.red::before,
+.progress.green::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  border-radius: 6px 0 0 6px;
+}
+.progress.red::before {
+  width: 75%;
+  background-color: #f44336;
+}
+.progress.green::before {
+  width: 75%;        
+  background-color: #4caf50;
+}
+
+.details-link {
+  color: #5a67d8;
+  font-size: 12px;
+  /* margin-top: 10px; */
+  text-decoration: none;
+  margin-left: 75%;
+}
+
+.activity-section {
+  margin-top: 40px;
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.activity-chart {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.day-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.bar {
+  width: 6px;
+  border-radius: 3px;
+}
+
+.bar-primary {
+  height: 40px;
+  background: #00c6ff;
+}
+
+.bar-secondary {
+  height: 20px;
+  background: #402ee8;
+}
+
+.day-label {
+  font-size: 12px;
+  color: gray;
+}
+
+/* --------------------------dashbord icon last week-------------------------- */
+.dashboard-title {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  gap: 60%;
+  color: #111827;
+  margin-bottom: 1.5rem;
+  margin-top: 30px;
+}
+
+.dropdown-icon {
+  font-size: 1rem;
+  color: #6b7280;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+
+
+/* ------------------------------this is mobile responsive ------------------------------------ */
+
+
+/* Base styles remain as you provided */
+
+/* Responsive tweaks */
+
+/* Small screens (mobile phones) */
+@media (max-width: 600px) {
+  .dashboard {
+    width: 100%;
+    padding: 15px 10px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+
+  .notification-icon {
+    align-self: flex-end;
+    margin-left: 0;
+  }
+
+  .dashboard-title {
+    font-size: 1.2rem;
+    gap: 10%;
+    margin-top: 20px;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+  }
+
+  .dashboard-title .dropdown-icon {
+    font-size: 1.2rem;
+    margin-left: 0;
+  }
+
+  .dashboard-body {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .anatomy-section,
+  .health-stats {
+    width: 100%;
+    flex-basis: 100%;
+  }
+
+  .anatomy-image {
+    max-height: 250px;
+  }
+
+  .tag {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+
+  .health-stats {
+    gap: 20px;
+  }
+
+  .stat-card {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .details-link {
+    margin-left: 0;
+    display: inline-block;
+    margin-top: 15px;
+  }
+}
+
+/* Medium screens (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .dashboard {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .dashboard-header {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .search-bar {
+    width: 70%;
+  }
+
+  .notification-icon {
+    font-size: 22px;
+  }
+
+  .dashboard-body {
+    gap: 15%;
+    flex-wrap: nowrap;
+  }
+
+  .anatomy-image {
+    max-height: 300px;
+  }
+
+  .tag {
+    font-size: 11px;
+    padding: 5px 12px;
+  }
+
+  .stat-card {
+    width: 90%;
+  }
+}
+
+/* Larger screens (desktops) */
+/* Your original styles cover these */
+

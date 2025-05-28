@@ -1,0 +1,101 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #f6faff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #402ee8;
+}
+
+.header-search {
+  flex: 1;
+  margin: 0 20px;
+  padding: 8px 14px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: #e9ecef;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: default;
+  color: #402ee8;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: #1f2c3f;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+/* --- Responsive Styles --- */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .header-search {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .header-icons {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .user-name {
+    display: none; /* Hide name on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    padding: 10px 12px;
+  }
+
+  .logo-title {
+    font-size: 1.2rem;
+  }
+
+  .header-icons {
+    gap: 10px;
+  }
+
+  .icon-btn {
+    font-size: 1.1rem;
+  }
+
+  .avatar {
+    width: 32px;
+    height: 32px;
+  }
+}

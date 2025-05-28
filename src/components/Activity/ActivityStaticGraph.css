@@ -1,0 +1,236 @@
+.activity-container {
+  background: #f6faff;
+  padding: 20px;
+  border-radius: 20px;
+  width: 98%;
+  margin-top: 10px;
+  /* max-width: 700px; */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.activity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.activity-header h4 {
+  color: #1a1a40;
+  font-weight: 600;
+}
+
+.activity-header p {
+  font-size: 14px;
+  color: #888;
+}
+
+.chart {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+}
+.day-bars {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.bar {
+  width: 3px;
+  border-radius: 4px;
+}
+
+/* Bar Types */
+.short-gray {
+  height: 20px;
+  margin-top: 10px;
+  background-color: #cfd8dc;
+}
+
+.bottom-gray {
+  height: 40px;
+  background-color: #3f51b5;
+  margin-top: auto;
+}
+
+.mid-teal {
+  height: 35px;
+  background-color: #1de9b6;
+}
+
+.tall-teal {
+  height: 50px;
+  background-color: #1de9b6;
+}
+
+.max-teal {
+  height: 80px;
+  background-color: #cfd8dc;
+}
+
+.indigo-gap {
+  height: 35px;
+  background-color: #1de9b6;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.small-indigo-gap {
+  height: 20px;
+  background-color: #3f51b5;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.tall-indigo-gap {
+  height: 50px;
+  background-color: #3f51b5;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.day-label {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #666;
+}
+
+.split-bar {
+  display: flex;
+  flex-direction: column;
+  height: 85px;
+  width: 3px;
+  justify-content: space-between;
+}
+
+.split-bar .split-top {
+  height: 40px;
+  background-color: #1de9b6; /* Teal */
+  border-radius: 4px 4px 0 0;
+}
+
+.split-bar .split-bottom {
+  height: 40px;
+  background-color: #3f51b5; /* Indigo */
+  border-radius: 0 0 4px 4px;
+}
+
+
+
+
+/* -------------------------this is media qurry mobile resopnsive----------------------- */
+
+/* Mobile responsive for ActivityStaticGraph */
+@media (max-width: 768px) {
+  .activity-container {
+    padding: 15px 10px;
+  }
+
+  .activity-header {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .activity-header h4 {
+    font-size: 1.1rem;
+  }
+
+  .activity-header p {
+    font-size: 13px;
+  }
+
+  .chart {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .day {
+    margin-bottom: 12px;
+  }
+
+  .day-bars {
+    gap: 6px;
+  }
+
+  .bar {
+    width: 2px;
+  }
+
+  /* Adjust heights proportionally for smaller screens */
+  .short-gray {
+    height: 15px;
+  }
+
+  .bottom-gray {
+    height: 30px;
+  }
+
+  .mid-teal {
+    height: 25px;
+  }
+
+  .tall-teal {
+    height: 40px;
+  }
+
+  .max-teal {
+    height: 60px;
+  }
+
+  .indigo-gap {
+    height: 25px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+
+  .small-indigo-gap {
+    height: 15px;
+  }
+
+  .tall-indigo-gap {
+    height: 40px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+
+  .split-bar {
+    height: 65px;
+    width: 2px;
+  }
+
+  .split-bar .split-top,
+  .split-bar .split-bottom {
+    height: 32px;
+  }
+
+  .day-label {
+    font-size: 10px;
+    margin-top: 6px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .activity-header h4 {
+    font-size: 1rem;
+  }
+
+  .activity-header p {
+    font-size: 12px;
+  }
+
+  .bar {
+    width: 1.5px;
+  }
+}
